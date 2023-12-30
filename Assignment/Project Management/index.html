@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 7.0.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/2023zjude-ORG030/images/1-apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/2023zjude-ORG030/images/1-favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/2023zjude-ORG030/images/1-favicon-16x16.png">
+  <link rel="mask-icon" href="/2023zjude-ORG030/images/safari-pinned-tab.svg" color="#222">
+
+<link rel="stylesheet" href="/2023zjude-ORG030/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha256-yIDrPSXHZdOZhAqiBP7CKzIwMQmRCJ8UeB8Jo17YC4o=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"nexmaker-fab.github.io","root":"//2023zjude-ORG030/","images":"/2023zjude-ORG030/images","scheme":"Pisces","darkmode":true,"version":"8.19.1","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/2023zjude-ORG030/js/config.js"></script>
+
+    <meta name="description" content="Website Development 1 Environment Preparation1.1 Node Environment SetupHexo is written in Node.js, so you need to install Node.js and the npm tool within it. Windows download path: Node Official Websi">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Website Development">
+<meta property="og:url" content="https://nexmaker-fab.github.io//2023zjude-ORG030/Assignment/Project%20Management/index.html">
+<meta property="og:site_name" content="ORG030">
+<meta property="og:description" content="Website Development 1 Environment Preparation1.1 Node Environment SetupHexo is written in Node.js, so you need to install Node.js and the npm tool within it. Windows download path: Node Official Websi">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://github.com/ORG030/picorg/blob/main/md01/img03.png?raw=true">
+<meta property="og:image" content="https://github.com/ORG030/picorg/blob/main/md01/img04.png?raw=true">
+<meta property="og:image" content="https://github.com/ORG030/picorg/blob/main/md01/img05.png?raw=true">
+<meta property="og:image" content="https://github.com/ORG030/picorg/blob/main/md01/img07.png?raw=true">
+<meta property="og:image" content="https://github.com/ORG030/picorg/blob/main/md01/img06.png?raw=true">
+<meta property="og:image" content="https://github.com/ORG030/picorg/blob/main/md01/img01.png?raw=true">
+<meta property="article:published_time" content="2023-09-30T16:00:00.000Z">
+<meta property="article:modified_time" content="2023-09-30T16:00:00.000Z">
+<meta property="article:author" content="Adrenaline">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://github.com/ORG030/picorg/blob/main/md01/img03.png?raw=true">
+
+
+<link rel="canonical" href="https://nexmaker-fab.github.io//2023zjude-ORG030/Assignment/Project%20Management/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"en","comments":true,"permalink":"https://nexmaker-fab.github.io//2023zjude-ORG030/Assignment/Project%20Management/index.html","path":"Assignment/Project Management/index.html","title":"Website Development"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Website Development | ORG030
+</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/2023zjude-ORG030/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a target="_blank" href="//2023zjude-ORG030/" class="brand" rel="start noopener">
+      <i class="logo-line"></i>
+      <p class="site-title">ORG030</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">DEEP SEA BIG PINEAPPLE GROUP</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/2023zjude-ORG030/Home/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-about"><a href="/2023zjude-ORG030/About/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li><li class="menu-item menu-item-assignment"><a href="/2023zjude-ORG030/Assignment/" rel="section"><i class="fa fa-book fa-fw"></i>Assignment</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Website-Development"><span class="nav-number">1.</span> <span class="nav-text">Website Development</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-Environment-Preparation"><span class="nav-number">1.1.</span> <span class="nav-text">1 Environment Preparation</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-Node-Environment-Setup"><span class="nav-number">1.1.1.</span> <span class="nav-text">1.1 Node Environment Setup</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-Git-Environment-Setup"><span class="nav-number">1.1.2.</span> <span class="nav-text">1.2 Git Environment Setup</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-Verification-of-Successful-Setup"><span class="nav-number">1.1.3.</span> <span class="nav-text">1.3 Verification of Successful Setup</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-Hexo-Installation"><span class="nav-number">1.2.</span> <span class="nav-text">2 Hexo Installation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-Hexo-Initialization"><span class="nav-number">1.3.</span> <span class="nav-text">3 Hexo Initialization</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-GitHub-Repository-Preparation"><span class="nav-number">1.4.</span> <span class="nav-text">4 GitHub Repository Preparation</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-Creating-a-Repository"><span class="nav-number">1.4.1.</span> <span class="nav-text">4.1 Creating a Repository</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-SSH-Binding"><span class="nav-number">1.4.2.</span> <span class="nav-text">4.2 SSH Binding</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-Deploying-Hexo-to-GitHub"><span class="nav-number">1.5.</span> <span class="nav-text">5. Deploying Hexo to GitHub</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Adrenaline"
+      src="/2023zjude-ORG030/images/1-favicon-32x32.png">
+  <p class="site-author-name" itemprop="name">Adrenaline</p>
+  <div class="site-description" itemprop="description">Design program</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner page posts-expand">
+    <ul class="sub-menu menu">
+      
+  <li class="menu-item menu-item-project-management"><a href="/2023zjude-ORG030/Assignment/Project%20Management/" rel="section"><i class="fa fa-flag fa-fw"></i>Project Management</a></li>
+
+
+      
+  <li class="menu-item menu-item-cad-design"><a href="/2023zjude-ORG030/Assignment/CAD%20Design/" rel="section"><i class="fa fa-puzzle-piece fa-fw"></i>CAD Design</a></li>
+
+
+      
+  <li class="menu-item menu-item-arduino"><a href="/2023zjude-ORG030/Assignment/Arduino/" rel="section">Arduino</a></li>
+
+
+      
+  <li class="menu-item menu-item-3d-printing"><a href="/2023zjude-ORG030/Assignment/3D%20Printing/" rel="section">3D Printing</a></li>
+
+
+    </ul>
+
+
+    
+    
+    
+    <div class="post-block" lang="en"><header class="post-header">
+
+<h1 class="post-title" itemprop="name headline">Website Development
+</h1>
+
+<div class="post-meta-container">
+  <ul class="breadcrumb">
+            <li><a href="/2023zjude-ORG030/Assignment/">ASSIGNMENT</a></li>
+          <li>PROJECT MANAGEMENT</li>
+  </ul>
+</div>
+
+</header>
+
+      
+      
+      <div class="post-body">
+          <h1 id="Website-Development"><a href="#Website-Development" class="headerlink" title="Website Development"></a>Website Development</h1><hr>
+<h2 id="1-Environment-Preparation"><a href="#1-Environment-Preparation" class="headerlink" title="1 Environment Preparation"></a>1 Environment Preparation</h2><h3 id="1-1-Node-Environment-Setup"><a href="#1-1-Node-Environment-Setup" class="headerlink" title="1.1 Node Environment Setup"></a>1.1 Node Environment Setup</h3><p>Hexo is written in Node.js, so you need to install Node.js and the npm tool within it.</p>
+<p>Windows download path: <a target="_blank" rel="noopener" href="https://nodejs.org/en/download">Node Official Website</a></p>
+<p>According to the computer configuration and actual needs to download the corresponding version, select the 64-bit, Windows Installer(.msi) LTS version.</p>
+<img src="https://github.com/ORG030/picorg/blob/main/md01/img03.png?raw=true" style="width: 50%; height: auto;">
+
+<h3 id="1-2-Git-Environment-Setup"><a href="#1-2-Git-Environment-Setup" class="headerlink" title="1.2 Git Environment Setup"></a>1.2 Git Environment Setup</h3><p>A distributed version control system used for project version control management, operate git using the Git Bash command line tool.</p>
+<p>Windows download path: <a target="_blank" rel="noopener" href="https://git-scm.com/download/win">Git Official Website</a></p>
+<img src="https://github.com/ORG030/picorg/blob/main/md01/img04.png?raw=true" style="width: 50%; height: auto;">
+
+<img src="https://github.com/ORG030/picorg/blob/main/md01/img05.png?raw=true" style="width: 50%; height: auto;">
+
+<h3 id="1-3-Verification-of-Successful-Setup"><a href="#1-3-Verification-of-Successful-Setup" class="headerlink" title="1.3 Verification of Successful Setup"></a>1.3 Verification of Successful Setup</h3><p>Enter the following commands in the command line in sequence, if successful, the corresponding version number will appear</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git --version</span><br><span class="line"></span><br><span class="line">node -v</span><br><span class="line"></span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure>
+
+<img src="https://github.com/ORG030/picorg/blob/main/md01/img07.png?raw=true" style="width: 30%; height: auto;">
+
+<img src="https://github.com/ORG030/picorg/blob/main/md01/img06.png?raw=true" style="width: 30%; height: auto;">
+
+<hr>
+<h2 id="2-Hexo-Installation"><a href="#2-Hexo-Installation" class="headerlink" title="2 Hexo Installation"></a>2 Hexo Installation</h2><ol>
+<li><p>First of all, I created a disk to store the local Github repository files blog directory (can be customized directory storage), I chose the disk address as follows:</p>
+<p>[pic ]</p>
+<p>Choose the installation path folder, right-click and select <code>Git Bash here</code>.</p>
+<img src="https://github.com/ORG030/picorg/blob/main/md01/img01.png?raw=true" style="width: 30%; height: auto;">
+</li>
+<li><p>Enter in the command line <code>npm install -g hexo-cli</code></p>
+</li>
+<li><p>After the run is over, type <code>hexo -v</code> to view the version.</p>
+</li>
+</ol>
+<hr>
+<h2 id="3-Hexo-Initialization"><a href="#3-Hexo-Initialization" class="headerlink" title="3 Hexo Initialization"></a>3 Hexo Initialization</h2><ol>
+<li>Continue to enter in the command line in sequence</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">hexo init my-blog</span><br><span class="line"></span><br><span class="line">cd my-blog</span><br><span class="line"></span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>After the run is over, you will see the following content in the folder:</li>
+</ol>
+<ul>
+<li>node_modules: Dependency packages</li>
+<li>public: Stores generated pages</li>
+<li>scaffolds: Some templates for generating articles</li>
+<li>source: To store your articles</li>
+<li>themes: Themes</li>
+<li>_config.yml: Blog configuration file</li>
+</ul>
+<ol start="3">
+<li>Then enter the following commands in the command line to start locally</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean</span><br><span class="line"></span><br><span class="line">$ hexo g</span><br><span class="line"></span><br><span class="line">$ hexo s</span><br></pre></td></tr></table></figure>
+
+<ol start="5">
+<li><p>With this, the task creation is completed, enter <code>localhost:4000</code> in the browser to see your blog interface.</p>
+</li>
+<li><p>In the command line <code>ctrl + c</code> can shut down the service.</p>
+</li>
+</ol>
+<hr>
+<h2 id="4-GitHub-Repository-Preparation"><a href="#4-GitHub-Repository-Preparation" class="headerlink" title="4 GitHub Repository Preparation"></a>4 GitHub Repository Preparation</h2><h3 id="4-1-Creating-a-Repository"><a href="#4-1-Creating-a-Repository" class="headerlink" title="4.1 Creating a Repository"></a>4.1 Creating a Repository</h3><ol>
+<li>Register a GitHub account.</li>
+<li>Click on <code>New repository</code> to create a new repository.</li>
+<li>Create a GitHub-specific page, <code>username.github.io</code>.</li>
+</ol>
+<h3 id="4-2-SSH-Binding"><a href="#4-2-SSH-Binding" class="headerlink" title="4.2 SSH Binding"></a>4.2 SSH Binding</h3><ol>
+<li>Enter the following command in Git Bash, where yourname is your GitHub username and youremail is your GitHub email.</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;yourname&quot;</span><br><span class="line">git config --global user.email &quot;youremail&quot;</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>Create an SSH key, continue with enter, then you can view the public key by typing <code>cat id_rsa.pub</code>.</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;youremail&quot;</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li><p>In GitHub’s settings, set up SSH keys by copying the information into it.</p>
+</li>
+<li><p>Enter the following command in Git Bash to check if SSH is bound successfully.</p>
+</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="5-Deploying-Hexo-to-GitHub"><a href="#5-Deploying-Hexo-to-GitHub" class="headerlink" title="5. Deploying Hexo to GitHub"></a>5. Deploying Hexo to GitHub</h2><ol>
+<li>Open the site configuration file <code>_config.yml</code> in the folder, scroll to the end, and modify the following:</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">    type: git</span><br><span class="line">    repo: git@github.com:zjc2782171149/ORG030.github.io.git</span><br><span class="line">    branch: main</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>Install <code>deploy-git</code>.</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>Deploy.</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line"></span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>After successful deployment, view your blog at <code>http://yourusername.github.io</code>.</li>
+</ol>
+
+      </div>
+      
+      
+      
+    </div>
+  <ul class="breadcrumb">
+            <li><a href="/2023zjude-ORG030/Assignment/">ASSIGNMENT</a></li>
+          <li>PROJECT MANAGEMENT</li>
+  </ul>
+
+    
+    
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2023</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Adrenaline</span>
+  </div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
+<script src="/2023zjude-ORG030/js/comments.js"></script><script src="/2023zjude-ORG030/js/utils.js"></script><script src="/2023zjude-ORG030/js/motion.js"></script><script src="/2023zjude-ORG030/js/next-boot.js"></script><script src="/2023zjude-ORG030/js/pjax.js"></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>

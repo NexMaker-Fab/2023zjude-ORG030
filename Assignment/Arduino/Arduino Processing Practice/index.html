@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 7.0.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/2023zjude-ORG030/images/1-apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/2023zjude-ORG030/images/1-favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/2023zjude-ORG030/images/1-favicon-16x16.png">
+  <link rel="mask-icon" href="/2023zjude-ORG030/images/safari-pinned-tab.svg" color="#222">
+
+<link rel="stylesheet" href="/2023zjude-ORG030/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha256-yIDrPSXHZdOZhAqiBP7CKzIwMQmRCJ8UeB8Jo17YC4o=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"nexmaker-fab.github.io","root":"//2023zjude-ORG030/","images":"/2023zjude-ORG030/images","scheme":"Pisces","darkmode":true,"version":"8.19.1","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/2023zjude-ORG030/js/config.js"></script>
+
+    <meta name="description" content="Arduino Processing Practice 1 Remote-Controlled Music Player  1.1 Demo IntroductionUtilize the interaction between Processing and Arduino to implement the functionality of a music player. Songs can be">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Arduino Processing Practice">
+<meta property="og:url" content="https://nexmaker-fab.github.io//2023zjude-ORG030/Assignment/Arduino/Arduino%20Processing%20Practice/index.html">
+<meta property="og:site_name" content="ORG030">
+<meta property="og:description" content="Arduino Processing Practice 1 Remote-Controlled Music Player  1.1 Demo IntroductionUtilize the interaction between Processing and Arduino to implement the functionality of a music player. Songs can be">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://github.com/ORG030/picorg/blob/main/Arduino/p3-1.png?raw=true">
+<meta property="og:image" content="https://github.com/ORG030/picorg/blob/main/Arduino/p3.jpg?raw=true">
+<meta property="og:image" content="https://github.com/ORG030/picorg/blob/main/Arduino/201.png?raw=true">
+<meta property="og:image" content="https://github.com/ORG030/picorg/blob/main/Arduino/202.png?raw=true">
+<meta property="og:image" content="https://github.com/ORG030/picorg/blob/main/Arduino/203.png?raw=true">
+<meta property="article:published_time" content="2023-11-27T16:00:00.000Z">
+<meta property="article:modified_time" content="2023-11-27T16:00:00.000Z">
+<meta property="article:author" content="Adrenaline">
+<meta property="article:tag" content="Arduino">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://github.com/ORG030/picorg/blob/main/Arduino/p3-1.png?raw=true">
+
+
+<link rel="canonical" href="https://nexmaker-fab.github.io//2023zjude-ORG030/Assignment/Arduino/Arduino%20Processing%20Practice/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"en","comments":true,"permalink":"https://nexmaker-fab.github.io//2023zjude-ORG030/Assignment/Arduino/Arduino%20Processing%20Practice/index.html","path":"Assignment/Arduino/Arduino Processing Practice/index.html","title":"Arduino Processing Practice"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Arduino Processing Practice | ORG030
+</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/2023zjude-ORG030/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a target="_blank" href="//2023zjude-ORG030/" class="brand" rel="start noopener">
+      <i class="logo-line"></i>
+      <p class="site-title">ORG030</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">DEEP SEA BIG PINEAPPLE GROUP</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/2023zjude-ORG030/Home/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-about"><a href="/2023zjude-ORG030/About/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li><li class="menu-item menu-item-assignment"><a href="/2023zjude-ORG030/Assignment/" rel="section"><i class="fa fa-book fa-fw"></i>Assignment</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Arduino-Processing-Practice"><span class="nav-number">1.</span> <span class="nav-text">Arduino Processing Practice</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-Remote-Controlled-Music-Player"><span class="nav-number">1.1.</span> <span class="nav-text">1 Remote-Controlled Music Player</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-Demo-Introduction"><span class="nav-number">1.1.1.</span> <span class="nav-text">1.1 Demo Introduction</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-List-of-components"><span class="nav-number">1.1.2.</span> <span class="nav-text">1.2 List of components</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-Schematic-circuit-diagram"><span class="nav-number">1.1.3.</span> <span class="nav-text">1.3 Schematic circuit diagram</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4-Arduino-code"><span class="nav-number">1.1.4.</span> <span class="nav-text">1.4 Arduino code</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-5-Processing-code"><span class="nav-number">1.1.5.</span> <span class="nav-text">1.5 Processing code</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-6-Run-result"><span class="nav-number">1.1.6.</span> <span class="nav-text">1.6 Run result</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-6-Reference"><span class="nav-number">1.1.7.</span> <span class="nav-text">1.6 Reference</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-Similar-open-source-project"><span class="nav-number">1.2.</span> <span class="nav-text">2 Similar open source project</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AudioBox-for-Kids-Arduino-and-DFMiniPlayer-Project"><span class="nav-number">1.3.</span> <span class="nav-text">AudioBox for Kids (Arduino and DFMiniPlayer Project)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-Project-Introduction"><span class="nav-number">1.3.1.</span> <span class="nav-text">2.1 Project Introduction</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-Administration"><span class="nav-number">1.3.2.</span> <span class="nav-text">2.2 Administration</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-Hardware"><span class="nav-number">1.3.3.</span> <span class="nav-text">2.3 Hardware</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4-Pros-and-Cons"><span class="nav-number">1.3.4.</span> <span class="nav-text">2.4 Pros and Cons</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-5-Project-Website"><span class="nav-number">1.3.5.</span> <span class="nav-text">2.5 Project Website</span></a></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Adrenaline"
+      src="/2023zjude-ORG030/images/1-favicon-32x32.png">
+  <p class="site-author-name" itemprop="name">Adrenaline</p>
+  <div class="site-description" itemprop="description">Design program</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner page posts-expand">
+
+
+    
+    
+    
+    <div class="post-block" lang="en"><header class="post-header">
+
+<h1 class="post-title" itemprop="name headline">Arduino Processing Practice
+</h1>
+
+<div class="post-meta-container">
+  <ul class="breadcrumb">
+            <li><a href="/2023zjude-ORG030/Assignment/">ASSIGNMENT</a></li>
+            <li><a href="/2023zjude-ORG030/Assignment/Arduino/">ARDUINO</a></li>
+          <li>ARDUINO PROCESSING PRACTICE</li>
+  </ul>
+</div>
+
+</header>
+
+      
+      
+      <div class="post-body">
+          <h1 id="Arduino-Processing-Practice"><a href="#Arduino-Processing-Practice" class="headerlink" title="Arduino Processing Practice"></a>Arduino Processing Practice</h1><hr>
+<h2 id="1-Remote-Controlled-Music-Player"><a href="#1-Remote-Controlled-Music-Player" class="headerlink" title="1 Remote-Controlled Music Player"></a>1 Remote-Controlled Music Player</h2><br/>
+
+<h3 id="1-1-Demo-Introduction"><a href="#1-1-Demo-Introduction" class="headerlink" title="1.1 Demo Introduction"></a>1.1 Demo Introduction</h3><p>Utilize the interaction between Processing and Arduino to implement the functionality of a music player. Songs can be controlled for switching and pausing through an infrared remote control. The player’s interface displays information about the music player’s status, and there is a dynamically changing circle at the center that corresponds to the volume of the music.</p>
+<h3 id="1-2-List-of-components"><a href="#1-2-List-of-components" class="headerlink" title="1.2 List of components"></a>1.2 List of components</h3><ul>
+<li><p>HX1838 Infrared Wireless Remote Control Kit IR Expansion Module (Remote Control + Receiver Board)</p>
+</li>
+<li><p>potentiometer</p>
+</li>
+</ul>
+<h3 id="1-3-Schematic-circuit-diagram"><a href="#1-3-Schematic-circuit-diagram" class="headerlink" title="1.3 Schematic circuit diagram"></a>1.3 Schematic circuit diagram</h3><img src="https://github.com/ORG030/picorg/blob/main/Arduino/p3-1.png?raw=true" style="width: 60%; height: auto;">
+
+<img src="https://github.com/ORG030/picorg/blob/main/Arduino/p3.jpg?raw=true" style="width: 60%; height: auto;">
+
+
+
+<h3 id="1-4-Arduino-code"><a href="#1-4-Arduino-code" class="headerlink" title="1.4 Arduino code"></a>1.4 Arduino code</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;IRremote.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> RECV_PIN = <span class="number">11</span>;  <span class="comment">// Pin for the infrared receiver</span></span><br><span class="line">IRrecv <span class="title function_">irrecv</span><span class="params">(RECV_PIN)</span>;</span><br><span class="line">decode_results results;</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">setup</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    Serial.begin(<span class="number">9600</span>);</span><br><span class="line">    irrecv.enableIRIn();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">loop</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span> (irrecv.decode(&amp;results))</span><br><span class="line">    &#123;</span><br><span class="line">        Serial.println(results.value, HEX);</span><br><span class="line">        irrecv.resume();  <span class="comment">// Receive the next value</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="1-5-Processing-code"><a href="#1-5-Processing-code" class="headerlink" title="1.5 Processing code"></a>1.5 Processing code</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br></pre></td><td class="code"><pre><span class="line">import processing.serial.*;</span><br><span class="line">import ddf.minim.*;  <span class="comment">// Library for audio processing</span></span><br><span class="line">color circleColor = color(<span class="number">255</span>);  <span class="comment">// Variable to store the color of the circle</span></span><br><span class="line">Minim minim;</span><br><span class="line">AudioPlayer player;</span><br><span class="line">Serial arduino;</span><br><span class="line"><span class="type">float</span> circleSize;</span><br><span class="line">String currentSong = <span class="string">&quot;Please Select a Track&quot;</span>;  <span class="comment">// Store information about the current song</span></span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">setup</span><span class="params">()</span> &#123;</span><br><span class="line">    size(<span class="number">600</span>, <span class="number">600</span>);</span><br><span class="line">    surface.setTitle(<span class="string">&quot;Music Player&quot;</span>); <span class="comment">// Set window title</span></span><br><span class="line">    arduino = new Serial(this, <span class="string">&quot;COM4&quot;</span>, <span class="number">9600</span>);  <span class="comment">// Replace COMx with the serial port connected to Arduino</span></span><br><span class="line">    minim = new Minim(this);</span><br><span class="line">    player = minim.loadFile(<span class="string">&quot;music1.mp3&quot;</span>); <span class="comment">// Path to the audio file</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">draw</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="comment">// Handle serial data from Arduino</span></span><br><span class="line">    <span class="keyword">while</span> (arduino.available() &gt; <span class="number">0</span>) &#123;</span><br><span class="line">        String data = arduino.readStringUntil(<span class="string">&#x27;\n&#x27;</span>);</span><br><span class="line">        <span class="keyword">if</span> (data != null &amp;&amp; data.trim().length() &gt; <span class="number">0</span>) &#123;</span><br><span class="line">            try &#123;</span><br><span class="line">                <span class="type">long</span> val = Long.parseLong(data.trim(), <span class="number">16</span>);</span><br><span class="line">                changeSong(val);</span><br><span class="line">            &#125; catch (NumberFormatException e) &#123;</span><br><span class="line">                println(<span class="string">&quot;Error parsing hex value: &quot;</span> + data.trim());</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    background(<span class="number">255</span>);</span><br><span class="line">    <span class="comment">// Display information about the currently playing song</span></span><br><span class="line">    textAlign(CENTER);</span><br><span class="line">    textSize(<span class="number">32</span>);</span><br><span class="line">    fill(<span class="number">0</span>);</span><br><span class="line">    text(currentSong, width / <span class="number">2</span>, height / <span class="number">2</span> - <span class="number">150</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Draw a circle based on the volume level</span></span><br><span class="line">    circleSize = <span class="built_in">map</span>(player.mix.level(), <span class="number">0</span>, <span class="number">1</span>, <span class="number">50</span>, <span class="number">500</span>);</span><br><span class="line">    fill(circleColor);</span><br><span class="line">    ellipse(width / <span class="number">2</span>, height / <span class="number">2</span>, circleSize, circleSize);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">changeSong</span><span class="params">(<span class="type">long</span> key)</span> &#123;</span><br><span class="line">    <span class="comment">// Switch or stop the song based on serial information</span></span><br><span class="line">    <span class="keyword">if</span> (key == <span class="number">0xFF30CF</span>) &#123;  <span class="comment">// Button 1</span></span><br><span class="line">        player.close();</span><br><span class="line">        player = minim.loadFile(<span class="string">&quot;music1.mp3&quot;</span>);</span><br><span class="line">        player.play();</span><br><span class="line">        circleColor = color(<span class="number">135</span>, <span class="number">206</span>, <span class="number">250</span>);  <span class="comment">// Circle color is sky blue</span></span><br><span class="line">        currentSong = <span class="string">&quot;Currently Playing\nCastle in the Sky&quot;</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (key == <span class="number">0xFF18E7</span>) &#123;  <span class="comment">// Button 2</span></span><br><span class="line">        player.close();</span><br><span class="line">        player = minim.loadFile(<span class="string">&quot;music2.mp3&quot;</span>);</span><br><span class="line">        player.play();</span><br><span class="line">        circleColor = color(<span class="number">0</span>, <span class="number">0</span>, <span class="number">139</span>);  <span class="comment">// Circle color is dark blue</span></span><br><span class="line">        currentSong = <span class="string">&quot;Currently Playing\nThe Rain&quot;</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (key == <span class="number">0xFF7A85</span>) &#123;  <span class="comment">// Button 3</span></span><br><span class="line">        player.close();</span><br><span class="line">        player = minim.loadFile(<span class="string">&quot;music3.mp3&quot;</span>);</span><br><span class="line">        player.play();</span><br><span class="line">        circleColor = color(<span class="number">255</span>, <span class="number">255</span>, <span class="number">224</span>);  <span class="comment">// Circle color is light yellow</span></span><br><span class="line">        currentSong = <span class="string">&quot;Currently Playing\nMerry Go Round&quot;</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (key == <span class="number">0xFFA25D</span>) &#123;  <span class="comment">// Stop button</span></span><br><span class="line">        player.close();  <span class="comment">// Stop the music</span></span><br><span class="line">        circleColor = color(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>);  <span class="comment">// Circle color reset to white</span></span><br><span class="line">        currentSong = <span class="string">&quot;Please Select a Track&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="1-6-Run-result"><a href="#1-6-Run-result" class="headerlink" title="1.6 Run result"></a>1.6 Run result</h3><iframe 
+        src="//player.bilibili.com/player.html?aid=366292416&bvid=BV1v94y1J78k&cid=1344169604&p=1" 
+        scrolling="no" 
+        border="0" 
+        frameborder="no" 
+        framespacing="0" 
+        allowfullscreen="true"
+        width="800"
+        height="600"> 
+</iframe>
+
+
+
+<h3 id="1-6-Reference"><a href="#1-6-Reference" class="headerlink" title="1.6 Reference"></a>1.6 Reference</h3><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/u013978070/article/details/119897442?spm=1001.2101.3001.6650.4&utm_medium=distribute.pc_relevant.none-task-blog-2~default~CTRLIST~Rate-4-119897442-blog-132256451.235%5Ev38%5Epc_relevant_anti_t3_base&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2~default~CTRLIST~Rate-4-119897442-blog-132256451.235%5Ev38%5Epc_relevant_anti_t3_base&utm_relevant_index=9">Arduino基础入门之九 红外遥控</a></p>
+<p><a target="_blank" rel="noopener" href="https://codeleading.com/article/2772286587/">Processing 入门教程（三十四） Audio 音频播放</a></p>
+<hr>
+<h2 id="2-Similar-open-source-project"><a href="#2-Similar-open-source-project" class="headerlink" title="2 Similar open source project"></a>2 Similar open source project</h2><h2 id="AudioBox-for-Kids-Arduino-and-DFMiniPlayer-Project"><a href="#AudioBox-for-Kids-Arduino-and-DFMiniPlayer-Project" class="headerlink" title="AudioBox for Kids (Arduino and DFMiniPlayer Project)"></a>AudioBox for Kids (Arduino and DFMiniPlayer Project)</h2><h3 id="2-1-Project-Introduction"><a href="#2-1-Project-Introduction" class="headerlink" title="2.1 Project Introduction"></a>2.1 Project Introduction</h3><p>This project is about an audiobox which allows small kids, who cannot read, don’t understand signs, or don’t know which button to push, an easy way to choose sound effects, audio books, or music tracks. Playing tracks can be done by putting small items on the top of the audiobox. Those items are related to the e.g. audio book kids want to play and can be e.g. small figures or labelled cards or other NFC tags.</p>
+<h3 id="2-2-Administration"><a href="#2-2-Administration" class="headerlink" title="2.2 Administration"></a>2.2 Administration</h3><ul>
+<li><strong>Copy mp3 files on TF Card (Micro SD Card)</strong></li>
+</ul>
+<p>Before you can start you need to copy the mp3 files which you want to listen to onto the TF card. Therefore have a look how the structure of the TF Card must look like. In addition to the sound file you want to listen to you need to copy some file for the menus.</p>
+<ul>
+<li><strong>Configure</strong> <strong>NFC</strong> <strong>Tag</strong></li>
+</ul>
+<p>Before a tag can be used you need to tell the audiobox what should be played. After placing the tag on top of the audiobox the first time the audiobox will ask you and guide you through a menu in order to configure the tag. The following relevant infromation will be stored on the tag: folder number, mode, special field. You need to select a folder in which the mp3 is placed and the Arduino will store the folder number on the tag. After that you need to choose a play mode which is Audio Book, Album, Party, Single Track, Audio Book with Bookmark, or Admin. If you choose Single Track or Admin mode the menu will ask for another track or informaiton that will be stored into the special field. (Bookmarks will be automatically stored direktly on the Arduino’s EEPROM so that you can continue listening furhter tracks of an audiobox. Bookmarks don’t require space on the tag.)</p>
+<h3 id="2-3-Hardware"><a href="#2-3-Hardware" class="headerlink" title="2.3 Hardware"></a>2.3 Hardware</h3><ul>
+<li><strong>Schema</strong></li>
+</ul>
+<img src="https://github.com/ORG030/picorg/blob/main/Arduino/201.png?raw=true" style="width: 60%; height: auto;">
+
+<ul>
+<li><strong>Case</strong></li>
+</ul>
+<p>The case is a simple wooden cube (20cm x 20xm x 20cm). It has three buttons at the top, a speaker at the front, 4 feet at the bottom, and a power jack and a power on&#x2F;off switch at the back. Inside there is a power bank, the board containing Arduino Nano, DfMiniPlayer, … and some cable to connect everything.</p>
+<img src="https://github.com/ORG030/picorg/blob/main/Arduino/202.png?raw=true" style="width: 60%; height: auto;">
+
+<ul>
+<li><strong>NFC</strong> <strong>Tags</strong></li>
+</ul>
+<img src="https://github.com/ORG030/picorg/blob/main/Arduino/203.png?raw=true" style="width: 60%; height: auto;">
+
+
+
+<h3 id="2-4-Pros-and-Cons"><a href="#2-4-Pros-and-Cons" class="headerlink" title="2.4 Pros and Cons"></a>2.4 Pros and Cons</h3><ul>
+<li><strong>Advantages:</strong></li>
+</ul>
+<p>Storing information on a TF card allows for the preservation of various audio data. NFC recognition enables accurate identification of different items, leading to faster recognition speeds. This is beneficial for our Final Project’s note recognition and audio playback.</p>
+<ul>
+<li><strong>Disadvantages</strong></li>
+</ul>
+<p> The project’s relevance to music composition functionalities is limited.</p>
+<h3 id="2-5-Project-Website"><a href="#2-5-Project-Website" class="headerlink" title="2.5 Project Website"></a>2.5 Project Website</h3><p><a target="_blank" rel="noopener" href="https://github.com/grimmpp/audiobox-for-kids">https://github.com/grimmpp/audiobox-for-kids</a></p>
+
+      </div>
+      
+      
+      
+    </div>
+  <ul class="breadcrumb">
+            <li><a href="/2023zjude-ORG030/Assignment/">ASSIGNMENT</a></li>
+            <li><a href="/2023zjude-ORG030/Assignment/Arduino/">ARDUINO</a></li>
+          <li>ARDUINO PROCESSING PRACTICE</li>
+  </ul>
+
+    
+    
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2023</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Adrenaline</span>
+  </div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
+<script src="/2023zjude-ORG030/js/comments.js"></script><script src="/2023zjude-ORG030/js/utils.js"></script><script src="/2023zjude-ORG030/js/motion.js"></script><script src="/2023zjude-ORG030/js/next-boot.js"></script><script src="/2023zjude-ORG030/js/pjax.js"></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>
